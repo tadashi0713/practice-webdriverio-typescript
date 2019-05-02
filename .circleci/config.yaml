@@ -1,0 +1,19 @@
+version: 2.1
+orbs:
+  node: circleci/node@1.0.1
+
+jobs:
+  build:
+    executor:
+      name: node/node
+      tag: "10.11.0"
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      - node/with-cache:
+          dir: ~/repo/node_modules
+          cache-version: v1
+          steps:
+            - run: yarn install
