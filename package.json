@@ -11,6 +11,7 @@
     "@wdio/mocha-framework": "^5.8.1",
     "@wdio/selenium-standalone-service": "^5.8.0",
     "@wdio/sync": "^5.8.1",
+    "chai": "^4.2.0",
     "webdriverio": "^5.8.1"
   },
   "scripts": {
