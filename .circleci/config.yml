@@ -17,3 +17,5 @@ jobs:
           cache-version: v1
           steps:
             - run: yarn install
+            - run: yarn run install-selenium
+            - run: yarn run test
