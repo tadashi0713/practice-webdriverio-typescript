@@ -5,6 +5,7 @@
 
 trigger:
 - master
+
 jobs:
   - job: linux_chrome
     pool:
@@ -22,5 +23,5 @@ jobs:
       displayName: 'npm install and install selenium'
 
     - script: |
-        npm run test
+        npm run test:chrome
       displayName: 'Run test'
