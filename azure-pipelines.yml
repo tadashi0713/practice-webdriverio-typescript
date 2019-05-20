@@ -5,21 +5,22 @@
 
 trigger:
 - master
+jobs:
+  - job: Linux Chrome
+    pool:
+      vmImage: 'ubuntu-latest'
 
-pool:
-  vmImage: 'ubuntu-latest'
+    steps:
+    - task: NodeTool@0
+      inputs:
+        versionSpec: '10.x'
+      displayName: 'Install Node.js'
 
-steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
+    - script: |
+        npm install
+        npm run install-selenium
+      displayName: 'npm install and install selenium'
 
-- script: |
-    npm install
-    npm run install-selenium
-  displayName: 'npm install and install selenium'
-
-- script: |
-    npm run test
-  displayName: 'Run test'
+    - script: |
+        npm run test
+      displayName: 'Run test'
