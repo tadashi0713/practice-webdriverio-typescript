@@ -44,3 +44,22 @@ jobs:
       - script: |
           npm run test:firefox
         displayName: 'Run test with chrome'
+
+  - job: macos_safari
+    pool:
+      vmImage: 'macOS-10.13'
+
+    steps:
+      - task: NodeTool@0
+        inputs:
+          versionSpec: '10.x'
+        displayName: 'Install Node.js'
+
+      - script: |
+          npm ci
+          npm run install-selenium
+        displayName: 'npm install and install selenium'
+
+      - script: |
+          npm run test:safari
+        displayName: 'Run test with chrome'
