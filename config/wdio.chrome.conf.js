@@ -8,6 +8,6 @@ config.capabilities = [{
   }
 }]
 
-config.services = ['selenium-standalone', 'chromedriver']
+config.services.append('chromedriver')
 
 exports.config = config;

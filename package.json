@@ -22,6 +22,7 @@
   },
   "scripts": {
     "install-selenium": "selenium-standalone install",
-    "test:chrome": "wdio ./config/wdio.chrome.conf.js"
+    "test:chrome": "wdio ./config/wdio.chrome.conf.js",
+    "test:firefox": "wdio ./config/wdio.firefox.conf.js"
   }
 }
