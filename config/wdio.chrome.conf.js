@@ -8,6 +8,6 @@ config.capabilities = [{
   }
 }]
 
-config.services.append('chromedriver')
+config.services.push('chromedriver')
 
 exports.config = config;
