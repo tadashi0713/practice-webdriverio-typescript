@@ -62,4 +62,4 @@ jobs:
 
       - script: |
           npm run test:safari
-        displayName: 'Run test with chrome'
+        displayName: 'Run test with safari'
