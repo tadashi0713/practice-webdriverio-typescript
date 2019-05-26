@@ -23,7 +23,13 @@ jobs:
 
     - script: |
         npm run test:chrome
+      continueOnError: true
       displayName: 'Run test with chrome'
+
+    - task: PublishTestResults@2
+      inputs:
+        testRunner: JUnit
+        testResultsFiles: ./reporter/*.xml
 
   - job: linux_firefox
     pool:
@@ -41,7 +47,13 @@ jobs:
 
       - script: |
           npm run test:firefox
+        continueOnError: true
         displayName: 'Run test with firefox'
+
+      - task: PublishTestResults@2
+        inputs:
+          testRunner: JUnit
+          testResultsFiles: ./reporter/*.xml
 
   - job: macos_safari
     pool:
@@ -59,7 +71,13 @@ jobs:
 
       - script: |
           npm run test:safari
+        continueOnError: true
         displayName: 'Run test with safari'
+
+      - task: PublishTestResults@2
+        inputs:
+          testRunner: JUnit
+          testResultsFiles: ./reporter/*.xml
 
   - job: windows_ie
     pool:
@@ -77,4 +95,10 @@ jobs:
 
       - script: |
           npm run test:ie
+        continueOnError: true
         displayName: 'Run test with edge'
+
+      - task: PublishTestResults@2
+        inputs:
+          testRunner: JUnit
+          testResultsFiles: ./reporter/*.xml
