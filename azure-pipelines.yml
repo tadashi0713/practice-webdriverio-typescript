@@ -41,7 +41,7 @@ jobs:
 
       - script: |
           npm run test:firefox
-        displayName: 'Run test with chrome'
+        displayName: 'Run test with firefox'
 
   - job: macos_safari
     pool:
@@ -60,3 +60,21 @@ jobs:
       - script: |
           npm run test:safari
         displayName: 'Run test with safari'
+
+  - job: windows_edge
+    pool:
+      vmImage: 'vs2019-win2019'
+
+    steps:
+      - task: NodeTool@0
+        inputs:
+          versionSpec: '10.x'
+        displayName: 'Install Node.js'
+
+      - script: |
+          npm ci
+        displayName: 'npm ci'
+
+      - script: |
+          npm run test:edge
+        displayName: 'Run test with edge'
