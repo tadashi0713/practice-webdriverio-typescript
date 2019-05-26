@@ -29,7 +29,7 @@ jobs:
     - task: PublishTestResults@2
       inputs:
         testRunner: JUnit
-        testResultsFiles: ./reporter/*.xml
+        testResultsFiles: '**/reporter/*.xml'
 
   - job: linux_firefox
     pool:
@@ -53,7 +53,7 @@ jobs:
       - task: PublishTestResults@2
         inputs:
           testRunner: JUnit
-          testResultsFiles: ./reporter/*.xml
+          testResultsFiles: '**/reporter/*.xml'
 
   - job: macos_safari
     pool:
@@ -77,7 +77,7 @@ jobs:
       - task: PublishTestResults@2
         inputs:
           testRunner: JUnit
-          testResultsFiles: ./reporter/*.xml
+          testResultsFiles: '**/reporter/*.xml'
 
   - job: windows_ie
     pool:
@@ -101,4 +101,4 @@ jobs:
       - task: PublishTestResults@2
         inputs:
           testRunner: JUnit
-          testResultsFiles: ./reporter/*.xml
+          testResultsFiles: '**/reporter/*.xml'
