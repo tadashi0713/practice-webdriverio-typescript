@@ -19,8 +19,7 @@ jobs:
 
     - script: |
         npm ci
-        npm run install-selenium
-      displayName: 'npm install and install selenium'
+      displayName: 'npm ci'
 
     - script: |
         npm run test:chrome
@@ -38,8 +37,7 @@ jobs:
 
       - script: |
           npm ci
-          npm run install-selenium
-        displayName: 'npm install and install selenium'
+        displayName: 'npm ci'
 
       - script: |
           npm run test:firefox
@@ -57,8 +55,7 @@ jobs:
 
       - script: |
           npm ci
-          npm run install-selenium
-        displayName: 'npm install and install selenium'
+        displayName: 'npm ci'
 
       - script: |
           npm run test:safari
