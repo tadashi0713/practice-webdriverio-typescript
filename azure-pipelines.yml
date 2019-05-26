@@ -61,7 +61,7 @@ jobs:
           npm run test:safari
         displayName: 'Run test with safari'
 
-  - job: windows_edge
+  - job: windows_ie
     pool:
       vmImage: 'vs2017-win2016'
 
@@ -76,5 +76,5 @@ jobs:
         displayName: 'npm ci'
 
       - script: |
-          npm run test:edge
+          npm run test:ie
         displayName: 'Run test with edge'

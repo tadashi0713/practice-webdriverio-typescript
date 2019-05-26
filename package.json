@@ -23,6 +23,6 @@
     "test:chrome": "wdio ./config/wdio.chrome.conf.js",
     "test:firefox": "wdio ./config/wdio.firefox.conf.js",
     "test:safari": "wdio ./config/wdio.safari.conf.js",
-    "test:edge": "wdio ./config/wdio.edge.conf.js"
+    "test:ie": "wdio ./config/wdio.ie.conf.js"
   }
 }
