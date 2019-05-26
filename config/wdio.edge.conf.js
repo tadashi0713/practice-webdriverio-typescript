@@ -1,7 +1,7 @@
 const config = require("./wdio.base.conf").config;
 
 config.capabilities = [{
-  browserName: 'edge',
+  browserName: 'MicrosoftEdge',
 }]
 
 exports.config = config;
