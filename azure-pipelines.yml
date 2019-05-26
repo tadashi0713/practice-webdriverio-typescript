@@ -11,12 +11,6 @@ jobs:
     pool:
       vmImage: 'ubuntu-latest'
 
-    steps:
-    - task: NodeTool@0
-      inputs:
-        versionSpec: '10.x'
-      displayName: 'Install Node.js'
-
     - script: |
         npm ci
       displayName: 'npm ci'
@@ -29,12 +23,6 @@ jobs:
     pool:
       vmImage: 'ubuntu-latest'
 
-    steps:
-      - task: NodeTool@0
-        inputs:
-          versionSpec: '10.x'
-        displayName: 'Install Node.js'
-
       - script: |
           npm ci
         displayName: 'npm ci'
@@ -46,12 +34,6 @@ jobs:
   - job: macos_safari
     pool:
       vmImage: 'macOS-10.13'
-
-    steps:
-      - task: NodeTool@0
-        inputs:
-          versionSpec: '10.x'
-        displayName: 'Install Node.js'
 
       - script: |
           npm ci
