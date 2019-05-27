@@ -24,5 +24,8 @@
     "test:firefox": "wdio ./config/wdio.firefox.conf.js",
     "test:safari": "wdio ./config/wdio.safari.conf.js",
     "test:ie": "wdio ./config/wdio.ie.conf.js"
+  },
+  "dependencies": {
+    "@wdio/selenium-standalone-service": "^5.9.3"
   }
 }
