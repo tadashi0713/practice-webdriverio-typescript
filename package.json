@@ -6,7 +6,7 @@
   "author": "tadashi0713 <tadashi.nemoto0713@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@types/chai": "4.1.7",
+    "@types/chai": "4.2.2",
     "@types/mocha": "5.2.7",
     "@wdio/cli": "5.11.12",
     "@wdio/junit-reporter": "5.11.7",
