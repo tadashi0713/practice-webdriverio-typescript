@@ -15,7 +15,7 @@
     "@wdio/selenium-standalone-service": "5.11.2",
     "@wdio/sync": "5.11.11",
     "chai": "4.2.0",
-    "ts-node": "8.3.0",
+    "ts-node": "8.4.1",
     "tsconfig-paths": "3.8.0",
     "typescript": "3.5.3",
     "webdriverio": "5.11.12"
