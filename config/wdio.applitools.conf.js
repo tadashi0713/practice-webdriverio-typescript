@@ -7,6 +7,10 @@ config.capabilities = [{
   }
 }]
 
+config.specs = [
+    './test/specs/applitools.ts'
+]
+
 config.onComplete = function(){
     console.log("Applitools")
 }
