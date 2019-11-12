@@ -6,6 +6,8 @@
   "author": "tadashi0713 <tadashi.nemoto0713@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@applitools/eyes-selenium": "^4.31.16",
+    "@applitools/eyes.webdriverio": "^2.11.2",
     "@types/chai": "4.2.4",
     "@types/mocha": "5.2.7",
     "@wdio/cli": "5.16.6",

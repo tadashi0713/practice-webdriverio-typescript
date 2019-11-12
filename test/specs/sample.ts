@@ -1,4 +1,10 @@
 import {expect} from "chai"
+import {
+  ClassicRunner,
+  Eyes,
+  Target
+} from '@applitools/eyes.webdriverio'
+import {Configuration} from '@applitools/eyes-selenium'
 
 describe("Sample", function () {
   it('can get title', function () {
