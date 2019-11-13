@@ -4,7 +4,7 @@ const { EyesService } = require('@applitools/eyes-webdriverio5-service');
 config.capabilities = [{
   browserName: 'chrome',
   'goog:chromeOptions': {
-    args: ['window-size=1920,1080', '--headless', '--disable-gpu']
+    args: ['window-size=500, 500', '--headless', '--disable-gpu']
   }
 }]
 
@@ -13,7 +13,7 @@ config.specs = [
 ]
 
 config.beforeHook = function() {
-  browser.setWindowSize(1280, 900);
+  browser.setWindowSize(500, 500);
 }
 
 config.services = ['selenium-standalone', [EyesService]]
