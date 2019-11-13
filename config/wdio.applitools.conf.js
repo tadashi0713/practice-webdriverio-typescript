@@ -1,20 +1,6 @@
 const config = require("./wdio.base.conf").config;
 const { EyesService } = require('@applitools/eyes-webdriverio5-service');
 
-export const applitoolsConfig = {
-  eyes: {
-    appName: 'WebdriverIO',
-    branchName: 'master',
-    hideCaret: true,
-    stitchMode: true,
-  },
-  services: [[EyesService]],
-
-  beforeHook() {
-  },
-};
-
-
 config.capabilities = [{
   browserName: 'chrome',
   'goog:chromeOptions': {
@@ -26,11 +12,19 @@ config.specs = [
     './test/specs/applitools.ts'
 ]
 
-config.before = function() {
-
+config.beforeHook = function() {
+  browser.setWindowSize(1280, 900);
 }
 
-config.onComplete = function(){
+config.services = ['selenium-standalone', [EyesService]]
+config.eyes = {
+  appName: 'WebdriverIO',
+  branchName: 'master',
+  hideCaret: true,
+  stitchMode: true,
+}
+
+config.onComplete = function() {
     console.log("Applitools")
 }
 
