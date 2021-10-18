@@ -7,7 +7,7 @@
   "license": "MIT",
   "devDependencies": {
     "@applitools/eyes-webdriverio": "5.8.3",
-    "@applitools/eyes-webdriverio5-service": "1.2.3",
+    "@applitools/eyes-webdriverio5-service": "1.13.6",
     "@types/chai": "4.2.4",
     "@types/mocha": "5.2.7",
     "@wdio/cli": "5.16.6",
